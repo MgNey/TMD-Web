@@ -1,0 +1,304 @@
+@charset "UTF-8";
+
+
+/*Comm*/
+.tmd-wrap {
+	display: flex;
+}
+.tmd-main {
+	flex: 1;
+	overflow-x: auto;
+}
+.tmd-content,.tmd-content-inn {
+	overflow-x: auto;
+    margin: 15px;
+    border-left: 1px solid #ddd;
+    box-shadow: 0px 2px 10px 1px #ccc;
+}
+.tmd-content {
+	margin-top: 150px;
+}
+.tmd-content-inn {
+	margin-top: 85px;
+}
+thead {
+	color: #000;
+	font-weight: bold;
+	border-bottom: 1px solid #ddd;
+}
+thead td {
+	padding: 15px 0;
+}
+.tmd-h3 {
+	position: fixed;
+	top: 0;
+	padding: 20px;
+	width: 100%;
+	background: #2196F3;
+	color: #fff;
+	z-index: 999;
+}
+tr td:first-child {
+	padding-left: 10px;
+}
+a:hover,a {
+	text-decoration: none;
+}
+
+body .row {
+	margin-right: 0;
+	margin-left: 0;
+}
+.tmd-btn {
+	display: inline-block;
+	padding: 10px 20px;
+	color: #fff;
+	background: #2196F3;
+	border-radius: 3px;
+	border: 0;
+}
+.tmd-btn:hover,.add-btn:hover {
+	color: #ddd;
+	background: #92c1e6;
+}
+.tb-pd-5 td {
+	padding: 5px;
+}
+.total,.amount {
+	font-size: 20px;
+	color: #000;
+	font-weight: bold;
+}
+.add-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #007bff;
+    color: #fff;
+    border-radius: 3px;
+}
+.drug-form .row input,.add-form input {
+	margin-bottom: 15px;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #ddd;
+}
+.drug-form .row input:focus,
+.add-form input:focus {
+	border-bottom: 2px solid #2196F3;
+}
+textarea {
+	width: 100%;
+}
+.bottom .save,.bottom .clear {
+	display: inline-block;
+    padding: 8px 0;
+    width: 100px;
+    color: #fff;
+    border: 0;
+    border-radius: 3px;
+}
+.bottom .com-btn {
+	display: inline-block;
+    padding: 8px 5px;
+    color: #fff;
+    border: 0;
+    border-radius: 3px;
+}
+.bottom .save:hover,.bottom .clear:hover,.bottom .com-btn:hover
+{
+	opacity: 0.8;
+}
+.order-ttl,.drug-detail {
+	padding-bottom: 10px;
+	font-size: 20px;
+	font-weight: bold;
+	border-bottom: 1px solid #ddd;
+}
+/*End Comm*/
+/*Font-size*/
+.ft-20 {
+	font-size: 20px;
+}
+.ft-w,.add-form label,.drug-form label {
+	font-weight: bold;
+}
+
+/*End Font-size*/
+
+/*COLOR*/
+	.bg-blue {
+		background: #2196F3;
+	}
+	.blue {
+		color: #2196F3 !important;
+	}
+
+	.bg-red {
+		background: #F44336;
+	}
+/* End COLOR*/
+
+/*Menu*/
+.tmd-menu {
+	min-height: 100vh;
+	background: #313131;
+	color: #fff;
+}
+.tmd-menu ul {
+	position: fixed;
+	/*margin-top: 20px;*/
+}
+.tmd-menu {
+	width: 190px;
+}
+.tmd-menu ul li {
+	border-bottom: 1px solid #706f6f;
+}
+.tmd-menu a {
+    display: block;
+    padding: 20px;
+    width: 190px;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+.tmd-menu a:hover {
+    background: #535151;
+}
+.tmd-menu a i {
+	margin-right: 10px;
+}
+a.active {
+	color: #ddd;
+    background: #6a6868;
+}
+/*End Menu*/
+
+
+/*Drug Form*/
+.drug-form label {
+	display: block;
+	margin-bottom: 0;
+}
+.drug-form .error {
+	color: red;
+}
+.drug-form .row {
+	margin-bottom: 15px;
+}
+.drug-form .row select {
+    padding: 8px 5px;
+    width: 100%;
+    border: 1px solid #efefef;
+}
+.drug-form .bottom {
+	text-align: right;
+}
+.drug-form input.csv-input {
+	border: 0;
+}
+.profile {
+	margin-left: 15px;
+}
+.profile label {
+	color: #2196F3;
+}
+.profile p {
+	width: 50%;
+	padding: 0 0 5px 10px ;
+	border-bottom: 1px solid #2196F3;
+}
+.edit_btn {
+    margin-left: 10px;
+    padding: 5px 0;
+    width: 135px;
+    color: #fff;
+    border-radius: 3px;
+    border: 0;
+    background: #2196F3;
+}
+.login-image img,.register-image img{
+	width: 50%;
+	padding: 3rem 0;
+}
+
+/*RECEIVED DETAIL*/
+.order-info li {
+	padding: 5px 0;
+}
+.order-info p {    
+    display: inline-block;
+    min-width: 400px;
+	color: #007bff;
+}
+
+/* Checkbox */
+.reg-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.reg-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.reg-checkbox:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.reg-checkbox input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.reg-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.reg-checkbox .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.google-map {
+  font-style: italic;
+  text-decoration: underline;
+}

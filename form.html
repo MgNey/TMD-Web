@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/tabs.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <script src="js/jquery-3.3.1.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/tab.js"></script>
+</head>
+<body>
+<div class="tmd-wrap">
+	<nav class="tmd-menu">
+		<ul>
+			<li><a href="index.html"><i class="fas fa-laptop-medical"></i>Order</a></li>
+			<li><a href="product.html" class="active"><i class="fas fa-pills"></i>Product</a></li>
+			<li><a href="account.html"><i class="far fa-user-circle"></i>User Profile</a></li>
+			<li><a href="login.html"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+		</ul>
+	</nav>
+	<div class="tmd-main">
+			<h3 class="tmd-h3">Product</h3>
+			<ul class="page-menu">
+			    <li class="link"><a href="product.html">Active Products</a></li>
+				<li class="link"><a href="inactive.html">Inactive Products</a></li>
+				<li class="link current"><a href="form.html">New Drugs</a></li>
+			</ul>
+		<div class="tmd-content">
+			<div class="product-content">
+				<div>
+					<ul class="drug">
+					    <li class="tab-link current" data-tab="drug-1">Form</li>
+						<li class="tab-link" data-tab="drug-2">CSV File</li>
+					</ul>
+					<div id="drug-1" class="drug-content current">
+						<form id="drugform" class="drug-form" type="multipart/form-data">
+							<div class="row">
+								<div class="col-md-6 col-xs-12"><label>Brand Name<span style="color: red;">*</span></label><input type="text" name="brand_name"></div>
+								<div class="col-md-6 col-xs-12"><label>Generic Name<span style="color: red;">*</span></label><input type="text" name="gene_name"></div>
+							</div>
+							<div class="row">
+								<div class="col-md-6 col-xs-12"><label>Form</label><input type="text" name="form"></div>
+								<div class="col-md-6 col-xs-12"><label>Strength</label><input type="text" name="Strength"></div>
+							</div>
+							<div class="row">
+								<div class="col-md-6 col-xs-12"><label>Country Of Origin<span style="color: red;">*</span></label>
+									<select name="countryOfOrigin" id="countryOfOrigin" style="display: block;">
+										<option value="">Choose country of origin</option>
+										<option value="0">India</option>
+										<option value="1">-</option>
+										<option value="2">Myanmar</option>
+										<option value="3">Philippines</option>
+										<option value="4">Bandung Indonesia</option>
+										<option value="5">China</option>
+									</select>
+									<a href="add_country.html" class="add-btn mt-3">ADD COUNTRY</a>
+								</div>
+								<div class="col-md-6 col-xs-12"><label>Choose Manufacturers<span style="color: red;">*</span></label>
+									<select name="manufacturer" id="manufacturer" style="display: block;"><option value="">Choose Manufacturers</option>
+										<option value="0">Cipla Ltd.</option>
+										<option value="1">-</option>
+										<option value="2">Skymax Laboratories Pvt.Ltd.</option>
+										<option value="3">Myanmar Pharmaceutical Factory</option>
+										<option value="4">Glaxo Smithkline Pharmaceuticals Ltd</option><option value="5"> Sunways (India) Pvt. Ltd.</option>
+										<option value="6">Zydus Cadila Health Care Limited</option></select>
+									<a href="add_manufacture.html" class="add-btn mt-3">ADD MANUFACTURERS</a>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6 col-xs-12"><label>Base Price<span style="color: red;">*</span></label><input type="text" name="basic_price"></div>
+								<div class="col-md-6 col-xs-12"><label>Avaliable Quantity</label><input type="text" name="ava_quantity"></div>
+							</div>
+							<div class="row">
+								<div class="col-md-6 col-xs-12">
+									<label>Packaging<span style="color: red;">*</span></label><input type="number" name="packging">
+									<a href="add_bonus.html" class="add-btn mt-3">Add Bonus for Drugs</a>
+								</div>
+								<div class="col-md-6 col-xs-12">
+									<label>Discount</label><input type="number" name="discount">
+									<a href="discount_drugs.html" class="add-btn mt-3">Add Discount for Drug</a>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6 col-xs-12"><label>Choose paymentTerm<span style="color: red;">*</span></label>
+									<select name="paymentTerm" style="display: block;">
+										<option value="">Choose Payment Terms</option>
+										<option value="0">NET30</option>
+										<option value="1">NET60</option>
+										<option value="2">COD</option></select>
+								</div>
+							</div>
+							<div class="bottom">
+								<input type="submit" value="SAVE" class="save bg-blue">
+								<input type="reset" value="CLEAR" class="clear bg-red">
+							</div>
+						</form>
+					</div>
+					<div id="drug-2" class="drug-content">
+						<form class="drug-form" type="multipart-formdata">
+							<div class="row">
+								<div class="col s12">
+									<div>
+										<label style="color: rgb(51, 51, 51); font-size: 16px;">Select CSV with drug item</label>
+										<div class="react-csv-input"><!-- react-text: 469 --><!-- /react-text --><input type="file" class="csv-input" accept="text/csv">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="bottom text-left">
+								<input type="submit" value="Upload" class="save bg-blue">
+							</div>
+						</form>
+					</div>
+
+				</div>
+			</div>
+		</div><!-- container -->
+		<footer><div style="text-align: center; padding: 20px 10px; border-top: 1px solid #2196F3;"><span class="blue">Seller web Beta-4</span></br>Copyright © All rights reserved by TMD team.</div></footer>
+	</div>
+
+		
+</div>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Thamardaw</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/tabs.css">
+  <link rel="stylesheet" href="js/form/screen.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <script src="js/jquery-3.3.1.js"></script>
+  <script src="js/form/jquery.validate.min.js"></script>
+  <script src="js/form/val_custom.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/tab.js"></script>
+  <style type="text/css">
+  </style>
+  <script type="text/javascript">
+  </script>
+</head>
+<body>
+ 
+<div class="tmd-wrap">
+	<nav class="tmd-menu">
+		<ul>
+			<li><a href="index.html"><i class="fas fa-laptop-medical"></i>Order</a></li>
+			<li><a href="product.html" class="active" ><i class="fas fa-pills"></i>Product</a></li>
+			<li><a href="account.html"><i class="far fa-user-circle"></i>User Profile</a></li>
+			<li><a href="login.html"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+		</ul>
+	</nav>
+	<div class="tmd-main">
+			<h3 class="tmd-h3">Active Product</h3>
+		<div class="tmd-content-inn">
+			<div class="p-3">
+				<p class="ft-w form-check-label">Brand Name<span style="color: red;">*</span></p>
+				<span>bran name</span>
+
+				<p class="ft-w form-check-label">Generic Name<span style="color: red;">*</span></p>
+				<span>generic name</span>
+
+				<p class="ft-w form-check-label">Form</p>
+				<span>form</span>
+
+				<p class="ft-w form-check-label">Strength</p>
+				<span>10mg</span>
+
+				<p class="ft-w form-check-label">Country Of Origin<span style="color: red;">*</span></p>
+				<span>Myanmar</span>
+			
+				<p class="ft-w form-check-label">Choose Manufacturers<span style="color: red;">*</span></p>
+				<span>Myanmar Pharmaceutical Factory</span>
+			</div>
+			<form id="drugform" class="drug-form" type="multipart/form-data">
+				<div class="row">
+					<div class="col-md-6 col-xs-12">
+						<label>Base Price<span style="color: red;">*</span></label>
+						<input type="text" name="basic_price" value="1000">
+					</div>
+					<div class="col-md-6 col-xs-12">
+						<label>Avaliable Quantity</label>
+						<input type="text" name="ava_quantity" value="10"></div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 col-xs-12">
+						<p class="ft-20 ft-w">Bonus For Drug</p>
+						<label>Minimum Order Quantity<span style="color: red;">*</span></label>
+						<input type="text" name="bon_qty">
+						<label>Number of Bonus Pack</label>
+						<input type="text" name="bon_pack" placeholder="(Eg; 2)">
+					</div>
+					<div class="col-md-6 col-xs-12">
+						<p class="ft-20 ft-w">Discount For Drug</p>
+						<label>Minimum Order Quantity<span style="color: red;">*</span></label>
+						<input type="text" name="dis_qty">
+						<label>Discount Percentage</label>
+						<input type="text" name="packging" placeholder="(Eg; 2)">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 col-xs-12"><label>Choose paymentTerm<span style="color: red;">*</span></label>
+						<select name="paymentTerm" style="display: block;">
+							<option value="">Choose Payment Terms</option>
+							<option value="0">NET30</option>
+							<option value="1">NET60</option>
+							<option value="2">COD</option></select>
+					</div>
+				</div>
+				<div class="bottom m-3">
+					<a href="#" class="save bg-blue text-center">UPADTE</a>
+					<a href="product.html" class="clear bg-red text-center">CANCEL</a>
+				</div>
+			</form>	
+		</div><!-- tmd-content-inn -->
+		<footer><div style="text-align: center; padding: 20px 10px; border-top: 1px solid #2196F3;"><span class="blue">Seller web Beta-4</span></br>Copyright © All rights reserved by TMD team.</div></footer>
+	</div>		
+</div>
+</body>
+</html>

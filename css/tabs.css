@@ -1,0 +1,83 @@
+
+		.page-menu{
+			position: fixed;
+			top: 73px;
+			margin: 0px;
+			padding: 10px 0;
+			width: 100%;
+			background: #fff;
+			list-style: none;
+			border-bottom: 1px solid #ddd;
+			box-shadow: 0 0 2px 0;
+			z-index: 999;
+		}
+		.page-menu .link{
+			display: inline-block;
+			margin-left: 15px;
+			width: 170px;
+			background: #2196F3;
+			color: #fff;
+			text-align: center;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+
+		.page-menu .link a {
+			display: block;
+			padding: 10px 0;
+			color: #fff;
+		}
+
+		.page-menu .link.current{
+			background: #6a6868;
+			color: #fff;
+		}
+
+		.order-content,.product-content{
+			/*display: none;*/
+			padding: 15px;
+			overflow-y: auto;
+		    overflow-x: auto;
+		}
+		.order-content.current{
+			display: inherit;
+		}
+
+		ul.dug{
+			position: fixed;
+			top: 73px;
+			margin: 0px;
+			padding: 10px 0;
+			width: 100%;
+			background: #fff;
+			list-style: none;
+			border-bottom: 1px solid #ddd;
+			box-shadow: 0 0 2px 0;
+		}
+		ul.drug li{
+			display: inline-block;
+			padding: 10px 15px;
+			color: #fff;
+			background: #313131;
+			border-radius: 4px;
+			cursor: pointer;
+		    width: 200px;
+		    text-align: center;
+		}
+
+		ul.drug li.current{
+			background: #6a6868;
+			color: #fff;
+		}
+
+		.drug-content{
+			display: none;
+			padding: 15px;
+			overflow-y: auto;
+		    overflow-x: auto;
+		    /*height: 86vh;*/
+		}
+
+		.drug-content.current{
+			display: inherit;
+		}

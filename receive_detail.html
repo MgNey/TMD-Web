@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Thamardaw</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/tabs.css">
+  <link rel="stylesheet" href="js/form/screen.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <script src="js/jquery-3.3.1.js"></script>
+  <script src="js/form/jquery.validate.min.js"></script>
+  <script src="js/form/val_custom.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/tab.js"></script>
+  <style type="text/css">
+  	
+.bg-gray {
+	background: #ddd;
+	border-bottom: 1px solid #fff;
+}
+.hide {
+	display: none;
+}
+.receved_table tr td:first-chil() {
+	 text-indent: 50px;
+}
+.drug_check {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    background: gray;
+    border: none;
+    color: #2196F3;
+    top: 5px;
+    line-height: 1;
+}
+.fa-check:before {
+	position: relative;
+	top: -1px;
+	padding: 1px;
+    background: #fff;
+    width: 16px;
+    height: 16px;
+}
+.delete:hover {
+	opacity: 0.5;
+	cursor: pointer;
+}
+button[disabled] {
+	opacity: .5;
+	background: #6a6868;
+	cursor: not-allowed;	
+}
+
+  </style>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		var item = this;
+
+	  $(".delete").click(function(){
+	  	alert("This item will be delete.");
+ 		$(this).parent().parent().remove();
+		var drug = $('.drug-list').length;
+		var bg = $('.bg-gray').length;
+		if(drug == bg ) {
+			$('.tmd-btn').prop('disabled', false);
+		} else {
+			$('.tmd-btn').prop('disabled', true);
+		}
+	  });
+
+	  	$('.drug-list').click(function(){
+	  		// alert('hello');
+	  			if($(this).hasClass('bg-gray')){
+	  				$(this).removeClass('bg-gray');
+	  				$(this).find('i').removeClass('fa-check');
+					$('.tmd-btn').prop('disabled', true);
+	  			} 
+	  			else {
+	  				$(this).addClass("bg-gray");
+	  				$(this).find('i').addClass('fa-check');
+					var drug = $('.drug-list').length;
+					var bg = $('.bg-gray').length;
+					if(drug == bg ) {
+						$('.tmd-btn').prop('disabled', false);
+					}
+
+	  			}
+	  	});
+	  	
+	  	$('.btn-disable').on('click', function(event) {
+		    event.preventDefault(); 
+		    var url = $(this).data('target');
+		    location.replace(url);
+			var tab_id = $(this).attr('data-tab');
+
+			$('ul.tabs li').removeClass('current');
+			$('.tab-content').removeClass('current');
+
+			$(".tab-link").addClass('hello');
+			$("#"+tab_id).addClass('current');
+
+		});
+	});
+</script>
+</head>
+
+<body>
+ 
+<div class="tmd-wrap">
+	<nav class="tmd-menu">
+		<ul>
+			<li><a href="index.html" class="active"><i class="fas fa-laptop-medical"></i>Order</a></li>
+			<li><a href="product.html"><i class="fas fa-pills"></i>Product</a></li>
+			<li><a href="account.html"><i class="far fa-user-circle"></i>User Profile</a></li>
+			<li><a href="login.html"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+		</ul>
+	</nav>
+	<div class="tmd-main">
+			<h3 class="tmd-h3">Received Detail</h3>
+		<div class="tmd-content-inn">
+			<a href="index.html" class="tmd-btn m-3">Back To Received</a>
+			<div class="receive_detail">
+				<div class="row">
+					<div class="col-md-12">
+						<p class="order-ttl">Order Info</p>
+						<ul class="order-info">
+							<li>
+								<p class="m-0">OrderId</p>:
+								<span>64</span>
+							</li>
+							<li>
+								<p class="m-0">Item Count</p>:
+								<span>4</span>
+							</li>
+							<li>
+								<p class="m-0">Buyer Name</p>:
+								<span>TMd</span>
+							</li>
+							<li>
+								<p class="m-0">Phone Number</p>:
+								<span>09343434341</span>
+							</li>
+							<li>
+								<p class="m-0">Clinic Or Drug Store Name</p>:
+								<span>TMd</span>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-12">
+						<div class="order-item">
+							<p class="drug-detail">Drugs Item Detail</p>
+							<table class="receive_table" style="width: 100%">
+								<thead>
+									<tr>
+										<td colspan="2" style="width: 20px;">Brand Name</td>
+										<td>Generic Name</td>
+										<td>Strength</td>
+										<td>Form</td>
+										<td>Packaging</td>
+										<td>Quantity</td>
+										<td>Price</td>
+										<td colspan="2">Amount</td>
+									</tr>
+								</thead>
+								<tbody class="tb-pd-5">
+									<tr class="drug-list">
+										<td><i class="fas drug_check"></i></td>
+										<td style="min-width: 150px;">Oramin-F</td>
+										<td style="min-width: 150px;">Ascorbic acid</td>
+										<td style="min-width: 110px;">500 mg</td>
+										<td style="min-width: 110px;">Capsule</td>
+										<td style="min-width: 110px;">30's(1Bx)</td>
+										<td style="min-width: 100px;">2</td>
+										<td style="min-width: 110">7800</td>
+										<td style="min-width: 150px;">15600</td>
+										<td style="width: 30px;"><span class="delete" style="color: red;"><i class="fas fa-trash-alt"></i></span></td>
+									</tr>
+									<tr class="drug-list">
+										<td><i class="fas drug_check"></i></td>
+										<td style="min-width: 150px;">Oramin-F</td>
+										<td style="min-width: 150px;">Ascorbic acid</td>
+										<td style="min-width: 110px;">500 mg</td>
+										<td style="min-width: 110px;">Capsule</td>
+										<td style="min-width: 110px;">30's(1Bx)</td>
+										<td style="min-width: 100px;">2</td>
+										<td style="min-width: 110px;">7800</td>
+										<td style="min-width: 150px;">15600</td>
+										<td style="width: 30px;"><span class="delete" style="color: red;"><i class="fas fa-trash-alt"></i></span></td>
+									</tr>
+									<tr class="drug-list">
+										<td><i class="fas drug_check"></i></td>
+										<td style="min-width: 150px;">Oramin-F</td>
+										<td style="min-width: 150px;">Ascorbic acid</td>
+										<td style="min-width: 110px;">500 mg</td>
+										<td style="min-width: 110px;">Capsule</td>
+										<td style="min-width: 110px;">30's(1Bx)</td>
+										<td style="min-width: 100px;">2</td>
+										<td style="min-width: 110">7800</td>
+										<td style="min-width: 150px;">15600</td>
+										<td style="width: 30px;"><span class="delete" style="color: red;"><i class="fas fa-trash-alt"></i></span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="text-right"><button class="tmd-btn m-3 btn-disable next_pag" data-target="prepared.html" data-tab="tab-2" disabled>PREPARED</button></div>
+					</div>
+				</div>
+			</div>
+		</div><!-- container -->
+		<footer><div style="text-align: center; padding: 20px 10px; border-top: 1px solid #2196F3;"><span class="blue">Seller web Beta-4</span></br>Copyright © All rights reserved by TMD team.</div></footer>
+	</div>		
+</div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/tabs.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <script src="js/jquery-3.3.1.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/tab.js"></script>
+</head>
+<body>
+<div class="tmd-wrap">
+	<nav class="tmd-menu">
+		<ul>
+			<li><a href="index.html"><i class="fas fa-laptop-medical"></i>Order</a></li>
+			<li><a href="product.html" class="active"><i class="fas fa-pills"></i>Product</a></li>
+			<li><a href="account.html"><i class="far fa-user-circle"></i>User Profile</a></li>
+			<li><a href="login.html"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+		</ul>
+	</nav>
+	<div class="tmd-main">
+			<h3 class="tmd-h3">Product</h3>
+			<ul class="page-menu">
+			    <li class="link"><a href="product.html">Active Products</a></li>
+				<li class="link current"><a href="inactive.html">Inactive Products</a></li>
+				<li class="link"><a href="form.html">New Drugs</a></li>
+			</ul>
+		<div class="tmd-content">
+			<div class="product-content">
+				<div class="drug-table">
+					<table style="width: 100%">
+						<thead>
+							<tr>
+								<td>Brand Name</td>
+								<td>Generic Name</td>
+								<td>Strength</td>
+								<td>Form</td>
+								<td>Packaging</td>
+								<td>Price</td>
+								<td>Country of Origin</td>
+								<td>Discount</td>
+								<td>Bonus</td>
+								<td>Payment Terms</td>
+								<td>Available Qty</td>
+								<td class="text-center">Action</td>
+							</tr>
+						</thead>
+						<tbody class="tb-pd-5">
+							<tr>
+								<td style="min-width: 150px;">Oramin-F</td>
+								<td style="min-width: 150px;">Ascorbic acid</td>
+								<td style="min-width: 110px;">500 mg</td>
+								<td style="min-width: 110px;">Capsule</td>
+								<td style="min-width: 110px;">30's(1Bx)</td>
+								<td style="min-width: 110">7800</td>
+								<td style="min-width: 150px;">India</td>
+								<td style="min-width: 110px;">-</td>
+								<td style="min-width: 110px;">-</td>
+								<td style="min-width: 150px;">COD</td>
+								<td style="min-width: 110px;">2</td>
+								<td class="text-center" style="min-width: 200px">
+									<a href="inactive_edit.html" style="color: blue; cursor: pointer;">Edit</a> | <a href="product.html">Make it Active</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div><!-- container -->
+		<footer><div style="text-align: center; padding: 20px 10px; border-top: 1px solid #2196F3;"><span class="blue">Seller web Beta-4</span></br>Copyright © All rights reserved by TMD team.</div></footer>
+	</div>
+
+		
+</div>
+
+</body>
+</html>
